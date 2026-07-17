@@ -1,0 +1,92 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "OpenAPI definition",
+    "version": "v0"
+  },
+  "servers": [
+    { "url": "http://localhost:8080", "description": "Generated server url" }
+  ],
+  "tags": [
+    { "name": "invoice-controller" },
+    { "name": "user-controller" }
+  ],
+  "paths": {
+    "/v1/invoices": {
+      "get": {
+        "tags": ["invoice-controller"],
+        "operationId": "getInvoices",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/InvoiceDto" } } }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["invoice-controller"],
+        "operationId": "createInvoice",
+        "requestBody": {
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/InvoiceDto" } } },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": { "*/*": { "schema": { "$ref": "#/components/schemas/InvoiceDto" } } }
+          }
+        }
+      }
+    },
+    "/v1/invoices/{id}": {
+      "get": {
+        "tags": ["invoice-controller"],
+        "operationId": "getInvoices_1",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": { "*/*": { "schema": { "$ref": "#/components/schemas/InvoiceDto" } } }
+          }
+        }
+      }
+    },
+    "/v1/users": {
+      "get": {
+        "tags": ["user-controller"],
+        "operationId": "getUsers",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": { "*/*": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/UserDto" } } } }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "InvoiceDto": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "total": { "type": "number", "format": "double" },
+          "currency": { "type": "string" },
+          "status": { "type": "string" }
+        }
+      },
+      "UserDto": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "email": { "type": "string" },
+          "displayName": { "type": "string" }
+        }
+      }
+    }
+  }
+}

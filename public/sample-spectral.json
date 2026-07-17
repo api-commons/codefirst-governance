@@ -1,0 +1,13 @@
+[
+  { "code": "operation-description", "message": "Operation must have a description.", "severity": 1, "source": "target/openapi.json", "path": ["paths", "/v1/invoices", "get"] },
+  { "code": "operation-description", "message": "Operation must have a description.", "severity": 1, "source": "target/openapi.json", "path": ["paths", "/v1/invoices", "post"] },
+  { "code": "operation-summary", "message": "Operation should have a summary.", "severity": 1, "source": "target/openapi.json", "path": ["paths", "/v1/users", "get"] },
+  { "code": "operation-tags", "message": "Operation tags should use human-readable names, not controller class names.", "severity": 1, "source": "target/openapi.json", "path": ["paths", "/v1/invoices", "get", "tags"] },
+  { "code": "operation-operationId-unique", "message": "Every operation must have a unique operationId.", "severity": 0, "source": "target/openapi.json", "path": ["paths", "/v1/invoices/{id}", "get", "operationId"] },
+  { "code": "operation-success-response", "message": "Operation documents only a 200; error responses are missing.", "severity": 1, "source": "target/openapi.json", "path": ["paths", "/v1/invoices", "post", "responses"] },
+  { "code": "oas3-valid-schema-example", "message": "Schema property should have an example.", "severity": 1, "source": "target/openapi.json", "path": ["components", "schemas", "InvoiceDto", "properties", "total"] },
+  { "code": "schema-naming-convention", "message": "Schema name InvoiceDto carries a generator DTO suffix.", "severity": 1, "source": "target/openapi.json", "path": ["components", "schemas", "InvoiceDto"] },
+  { "code": "info-contact", "message": "Info object must have a contact.", "severity": 1, "source": "target/openapi.json", "path": ["info"] },
+  { "code": "info-description", "message": "Info object must have a description.", "severity": 1, "source": "target/openapi.json", "path": ["info"] },
+  { "code": "oas3-unused-component", "message": "Potentially unused component has been detected.", "severity": 2, "source": "target/openapi.json", "path": ["components", "schemas", "UserDto"] }
+]

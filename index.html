@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Code-First Governance — bridge annotation-generated OpenAPI to Spectral governance</title>
+    <meta name="description" content="Code-first teams generate OpenAPI from code annotations, and Spectral doesn't fit that loop. Paste a generated spec: this fingerprints the generator, separates the findings you must fix in code (because the spec is regenerated) from spec-authoring ones, and tells you the exact annotation to add. Runs entirely in your browser." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Google tag (gtag.js) — API Commons -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNSPT4B4S8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WNSPT4B4S8');
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <strong>Code-First Governance</strong>
+        <span class="tag">codefirst.apicommons.org</span>
+      </div>
+      <nav>
+        <a href="#" id="nav-about" title="Why code-first teams need this">About</a>
+        <a href="https://apis.io" target="_blank" rel="noopener">APIs.io</a>
+        <a href="https://apicommons.org" target="_blank" rel="noopener">API Commons</a>
+        <a href="https://github.com/api-commons/codefirst-governance" target="_blank" rel="noopener">GitHub</a>
+        <button id="engage-ae" class="engage-btn" type="button" title="Work with API Evangelist on code-first API governance">Get help</button>
+      </nav>
+    </header>
+    <!-- Laneworks ad network (ads.laneworks.net) -->
+    <script async src="https://ads.laneworks.net/embed.js"></script>
+    <div data-laneworks-ad="top-banner"></div>
+
+
+    <div class="toolbar">
+      <button class="measure-btn" id="analyze" type="button">Analyze ▸</button>
+      <button class="ghost-btn" id="load-sample" type="button">Load sample</button>
+      <div class="counts" id="status" aria-live="polite"></div>
+    </div>
+
+    <details class="drawer" id="drawer" open>
+      <summary>Inputs — generated OpenAPI &amp; Spectral results</summary>
+      <div class="io-grid">
+        <div class="io">
+          <h4>Generated OpenAPI <span class="muted">(YAML / JSON)</span>
+            <span class="io-btns"><button class="mini-btn" id="up-openapi" type="button">Upload</button></span>
+          </h4>
+          <textarea id="openapi-text" spellcheck="false" placeholder="Paste the OpenAPI your build generates from code annotations…"></textarea>
+          <input type="file" id="file-openapi" accept=".yaml,.yml,.json,application/json" hidden />
+        </div>
+        <div class="io">
+          <h4>Spectral results <span class="muted">(<code>spectral lint -f json</code>, optional)</span>
+            <span class="io-btns"><button class="mini-btn" id="up-results" type="button">Upload</button></span>
+          </h4>
+          <textarea id="results-text" spellcheck="false" placeholder="Paste your Spectral JSON output — or leave empty to run the built-in checklist…"></textarea>
+          <input type="file" id="file-results" accept=".json,application/json" hidden />
+        </div>
+      </div>
+    </details>
+
+    <main class="stage">
+      <section id="report"><div class="loading" id="loading">Loading…</div></section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
