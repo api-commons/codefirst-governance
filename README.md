@@ -36,14 +36,19 @@ Everything runs client-side. The OpenAPI and lint results you paste never leave 
 
 ---
 
-Part of the [API Commons](https://apicommons.org/tools/) governance tools, alongside
-[Governance Coverage](https://github.com/api-commons/governance-coverage),
-[Governance Waivers](https://github.com/api-commons/governance-waivers),
-[API Validator](https://github.com/api-commons/api-validator),
-[Spectral Ruleset Studio](https://github.com/api-commons/spectral-ruleset-studio), and the
-[API Governance Graph](https://github.com/api-commons/api-governance-graph).
-
 A project of [API Evangelist](https://apievangelist.com), maintained openly under
 [API Commons](https://apicommons.org). Free to fork; API Evangelist offers expert API
 governance services — including standing up governance for code-first teams — when you want
 help. Apache-2.0.
+
+## Part of API Commons
+
+An open, browser-first tool from **[API Commons](https://apicommons.org)** — free, no backend, your data stays in your browser. Browse the full set at **[apicommons.org/tools](https://apicommons.org/tools/)**.
+
+**Related tools**
+- [API Validator](https://validator.apicommons.org) — lint OpenAPI/AsyncAPI/Arazzo/JSON Schema in-browser
+- [Spectral Ruleset Studio](https://studio.apicommons.org) — turn a style guide into an owned ruleset
+- [Governance Coverage](https://coverage.apicommons.org) — how much of your API your rules actually check
+- [Governance Waivers](https://waivers.apicommons.org) — sanctioned, owned, expiring exceptions
+- [API Governance Graph](https://graph.apicommons.org) — bind building blocks into one graph + Gaps view
+- [Spectral Reporter](https://reporter.apicommons.org) — Spectral JSON → self-contained HTML report
