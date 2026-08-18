@@ -52,3 +52,10 @@ An open, browser-first tool from **[API Commons](https://apicommons.org)** — f
 - [Governance Waivers](https://waivers.apicommons.org) — sanctioned, owned, expiring exceptions
 - [API Governance Graph](https://graph.apicommons.org) — bind building blocks into one graph + Gaps view
 - [Spectral Reporter](https://reporter.apicommons.org) — Spectral JSON → self-contained HTML report
+
+## License
+
+**[Apache-2.0](LICENSE).**
+
+API Commons licenses **code** under Apache-2.0 and **artifacts** — schemas, rulesets,
+examples and API descriptions — under CC BY-NC-SA 4.0.
